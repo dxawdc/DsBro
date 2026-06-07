@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DsBro</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section id="orb" class="orb" aria-label="DeepSeek 充值余额悬浮球">
+        <div class="battery">
+          <div class="battery-tip"></div>
+          <div id="batteryFill" class="battery-fill"></div>
+          <div class="battery-lines">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="orb-copy">
+          <strong id="balanceText">--</strong>
+          <span id="percentText">--%</span>
+        </div>
+        <div id="resizeGrip" class="resize-grip" aria-hidden="true"></div>
+      </section>
+
+      <button id="scrim" class="scrim" hidden aria-label="关闭弹窗"></button>
+
+      <aside id="panel" class="panel" hidden>
+        <header class="panel-head">
+          <div>
+            <h1>DeepSeek 用量 <span id="statusText">等待后台同步</span></h1>
+          </div>
+          <button id="closePanel" class="icon-button" title="收起">×</button>
+        </header>
+
+        <div class="meter-row">
+          <div>
+            <span class="label">今日消费</span>
+            <strong id="todayCostText">--</strong>
+          </div>
+          <div>
+            <span class="label">充值余额</span>
+            <strong id="panelBalance">--</strong>
+          </div>
+          <div>
+            <span class="label">余额百分比</span>
+            <strong id="panelRemainingPercent">--%</strong>
+          </div>
+        </div>
+
+        <div class="progress">
+          <div id="panelProgress"></div>
+        </div>
+
+        <dl class="stats">
+          <div><dt>本月消费</dt><dd id="monthlySpendText">--</dd></div>
+          <div><dt>消费进度</dt><dd id="spendPercentText">--%</dd></div>
+          <div><dt>本月 tokens</dt><dd id="monthlyUsageText">--</dd></div>
+        </dl>
+
+        <section class="token-box">
+          <h2>今日 Token 使用量 <span id="todayTokenTotal">--（总量）</span></h2>
+          <div class="token-grid">
+            <div><span>输入（命中缓存）</span><strong id="inputCacheHit">--</strong></div>
+            <div><span>输入（未命中缓存）</span><strong id="inputCacheMiss">--</strong></div>
+            <div><span>缓存命中率</span><strong id="cacheHitRate">--%</strong></div>
+            <div><span>输出</span><strong id="outputTokens">--</strong></div>
+          </div>
+        </section>
+
+        <footer class="actions">
+          <button id="refreshButton">刷新</button>
+          <button id="openButton">打开网页</button>
+          <button id="quitButton" class="ghost">退出</button>
+        </footer>
+      </aside>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

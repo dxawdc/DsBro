@@ -1,0 +1,52 @@
+{
+  "name": "dsbro",
+  "version": "1.0.0",
+  "description": "DeepSeek 余额与 Token 桌面悬浮球",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build": "electron-builder",
+    "build:dir": "electron-builder --dir"
+  },
+  "keywords": [
+    "electron",
+    "deepseek",
+    "floating-ball"
+  ],
+  "author": "可以叫我才哥",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.15.0"
+  },
+  "build": {
+    "appId": "com.dsbro.app",
+    "productName": "DsBro",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "build/DsBro_512.ico",
+      "package.json"
+    ],
+    "win": {
+      "icon": "build/DsBro_512.ico",
+      "target": [
+        "portable"
+      ],
+      "legalTrademarks": "可以叫我才哥",
+      "artifactName": "${productName}-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}.${ext}",
+      "requestExecutionLevel": "user"
+    },
+    "extraMetadata": {
+      "author": "可以叫我才哥"
+    },
+    "compression": "maximum",
+    "afterPack": "./scripts/afterPack.js"
+  }
+}

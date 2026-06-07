@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist_new/
+
+# OS files
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Electron user data (local cache, not source)
+appdata/
+
+# Claude Code project memory (personal, not project-level)
+.claude/
