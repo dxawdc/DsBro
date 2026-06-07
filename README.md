@@ -12,6 +12,12 @@
 - 🔄 **自动同步**：每 6 分钟自动刷新数据
 - 🖱️ **可拖拽可缩放**：随意拖动位置，鼠标滚轮或缩放柄调整大小
 
+## 效果截图
+
+| 桌面悬浮球 | 详情弹窗 |
+|---|---|
+| ![悬浮球](showcase/%E6%82%AC%E6%B5%AE%E7%90%83.png) | ![弹窗](showcase/%E5%BC%B9%E7%AA%97.png) |
+
 ## 数据来源
 
 全部数据来自 Electron 内置的 DeepSeek 开发者后台页面，**不需要 DeepSeek API Key**。
@@ -88,6 +94,9 @@ npm run build
 DsBro/
 ├── build/
 │   └── DsBro_512.ico       # 应用图标
+├── showcase/
+│   ├── 悬浮球.png          # 悬浮球效果截图
+│   └── 弹窗.png            # 详情弹窗效果截图
 ├── src/
 │   ├── main.js             # Electron 主进程
 │   ├── preload.js          # 安全 IPC 桥接
